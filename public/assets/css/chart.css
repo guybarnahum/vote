@@ -1,0 +1,52 @@
+
+.myDiv  {
+    position   : relative; /*Parent MUST be relative*/
+    z-index    : 9;
+    background : blue;
+
+    color      : white;
+    text-align : left;
+    text-indent: 50px;
+    font       : 30px bold Helvetica, sans-serif;
+
+    border-top-left-radius    : 100px;
+    border-bottom-left-radius : 100px;
+    border-top-right-radius   : 100px;
+    border-bottom-right-radius: 100px;
+
+    /*Set width/height of the div in 'parent'*/
+    width :400px;
+    height:100px;
+}
+
+.myDiv:before {
+    position  : absolute; /*set 'child' to be absolute*/
+    z-index   : -1; /*Make this lower so text appears in front*/
+    content   : "";
+    background: orange;
+    
+    border-top-left-radius    : 100px;
+    border-bottom-left-radius : 100px;
+    
+    /*You can choose to align it left, right, top or bottom here*/
+    top   : 0 ;
+    right : 51% ;
+    bottom: 0 ;
+    left  : 0 ;
+}
+
+.myDiv:after {
+    position  : absolute; /*set 'child' to be absolute*/
+    z-index   : -1; /*Make this lower so text appears in front*/
+    content   : "";
+    background: red;
+    
+    border-top-left-radius    : 100px;
+    border-bottom-left-radius : 100px;
+    
+    /*You can choose to align it left, right, top or bottom here*/
+    top       : 0;
+    right     : 50%;
+    bottom    : 0;
+    left      : 0;
+}
